@@ -1,0 +1,190 @@
+
+/*Footer Section*/
+footer {
+    background: black;
+    color: whitesmoke;
+    padding: 20px;
+
+    .footer-container {
+        @extend .container;
+        display: flex;
+        flex-direction: column;
+        
+        @media (max-width:1200px){
+            width: 90%;
+        }
+    }
+
+    .footer-main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        
+        @media(max-width:992px){
+            flex-direction: column;
+        }
+
+        .column-1 {
+            flex-grow: 1;
+            
+            @media(max-width:992px){
+                padding: 10px 0;
+            }
+            
+             @media(max-width:575px){
+                display: block;
+                width: 100%;
+            }
+
+            h2 {
+                padding: 10px 0;
+                font-size: 30px;
+                
+                @media(max-width:768px){
+                    font-size: 1.6rem;
+                }
+            }
+
+            p {
+                padding: 10px 0;
+                color: #999999;
+                @media(max-width:768px){
+                    font-size: 0.9rem;
+                }
+            }
+
+            .social {
+                font-size: 20px;
+
+                a {
+                    display: inline-block;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: #999999;
+
+
+                    &:hover {
+                        color: orange;
+                    }
+                }
+            }
+
+            .newsletter {
+                input {
+                    display: inline-block;
+                    padding: 10px;
+                    margin: 10px 0;
+                    font-size: 16px;
+                    font-family: inherit;
+                    height: 56px;
+                    width: 400px;
+                    border: 1px solid #dadada;
+                    
+                    @media(max-width:575px){
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                button {
+                    background: orange;
+                    color: whitesmoke;
+                    padding: 10px 20px;
+                    border: none;
+                    outline: none;
+                    height: 54px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding: 0.8rem 2rem;
+                    transition: background 0.5s;
+                    
+                    @media(max-width:575px){
+                        width: 100%;
+                        display: block;
+                    }
+
+                    &:hover {
+                        background: $background-primary-dark;
+                    }
+                }
+
+            }
+        }
+
+        .column-2 {
+            flex-grow: 1;
+            padding: 10px;
+            
+            @media(max-width:992px){
+                padding: 10px 0;
+            }
+
+        }
+
+        .column-3 {
+            flex-grow: 1;
+            padding: 10px;
+            
+            @media(max-width:992px){
+                padding: 10px 0;
+            }
+
+        }
+
+    }
+
+    .link-widget {
+        margin-top: 20px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            padding: 0.4rem 0.2rem 0.6rem;
+            border-bottom: 1px dashed #dadada;
+
+            a {
+                text-decoration: none;
+                color: #999999;
+                position: relative;
+                display: block;
+                
+                @media(max-width:768px){
+                    font-size: 0.9rem;
+                }
+            }
+
+
+            span {
+                position: absolute;
+                right: 0;
+            }
+        }
+
+    }
+
+    .copyright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999999;
+        padding: 1rem;
+        margin-top: 1rem;
+
+        a {
+            text-decoration: none;
+            color: #dadada;
+
+            &:hover {
+                color: orange;
+            }
+        }
+
+    }
+
+}
+/*End Footer Section*/

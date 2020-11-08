@@ -1,0 +1,40 @@
+/*Pagination*/
+.pagination {
+    width: 100%;
+    height: 100px;
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        background: $background-secondary;
+        color: $text-grey;
+        padding: 0.8rem 1.4rem;
+        border-radius: 3px;
+        min-width: 42px;
+        transition: background 0.5s;
+        
+        @media(max-width:768px){
+            padding: 0.5rem 1rem;
+            min-width: 42px;
+            text-align: center;
+        }
+        
+        @media(max-width:575px){
+            padding: 0.4rem 0.8rem;
+            text-align: center;
+        }
+
+        &:hover {
+            background: $background-primary-dark;
+            color: $text-primary
+        }
+    }
+
+    .active {
+        background: $background-primary;
+        color: $text-primary
+    }
+}
+
+
+/*End Pagination*/

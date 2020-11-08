@@ -1,0 +1,44 @@
+.contact{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    
+    @media(max-width:768px){
+        flex-direction: column;
+    }
+    
+    .map{
+        flex-grow: 1;
+        @include section;
+        margin-right: 1rem;
+        background: $background-secondary;
+        @include center;
+        
+        @media(max-width:768px){
+            height: 450px;
+            margin-right: 0;
+        }
+        
+        span{
+            color: $text-grey;
+        }
+   
+    }
+    
+    .contact-form{
+        @include section;
+        flex-grow: 1;
+        
+        input{
+            @include input;
+        }
+        
+        textarea{
+            @include textarea;
+        }
+        
+        button{
+            @include button-submit;
+        }
+    }
+}

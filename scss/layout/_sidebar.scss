@@ -1,0 +1,113 @@
+/*Sidebar Section*/
+.sidebar {
+    
+    &::after {
+        content: '';
+        clear: both;
+    }
+    
+    
+    .row {
+        background: $background-light;
+    }
+
+    .sidebar-ads {
+        width: 100%;
+        text-align: center;
+        
+        @media(max-width:992px){
+             display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .trend-course,
+    .review {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+
+
+    .trend-course {
+        @media(max-width:992px){
+            margin-right: 1rem;
+        }
+        
+        img {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        a {
+           @include title;
+        }
+    }
+
+    .trend-course-title,
+    .recent-reviews-title,
+    .follow-us-title {
+        padding: 1rem;
+    }
+
+    .review.row {
+        margin-bottom: 0;
+        
+        @media(max-width:992px){
+            height: 100px;
+        }
+        
+        img{
+            @media(max-width:992px){
+                width: 100px;
+                height: 100%;
+            }
+        }
+
+        .ratings {
+            font-size: 0.7rem;
+            margin-top: 0.3rem;
+            color: #fbb034;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .social {
+        margin: 1rem;
+
+        a {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .facebook {
+            background: #3b5998;
+            color: $text-primary
+        }
+
+        .twitter {
+            background: #1da1f2;
+            color: $text-primary
+        }
+
+        .google-plus {
+            background: #ea4335;
+            color: $text-primary
+        }
+
+        .youtube {
+            background: #cd201f;
+            color: $text-primary
+        }
+    }
+
+}
+
+/*End Sidebar Section*/

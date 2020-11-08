@@ -1,0 +1,48 @@
+/*Animations*/
+
+@keyframes move-left {
+    0% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(5px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes move-right {
+    0% {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-5px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes move-up {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

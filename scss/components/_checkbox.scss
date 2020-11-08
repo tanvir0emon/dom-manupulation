@@ -1,0 +1,44 @@
+    .checkbox-container {
+        position: relative;
+        cursor: pointer;
+        
+        input[type='checkbox'] {
+            outline: none;
+            margin-right: 10px;
+            
+            &:checked ~ .checkmark {
+                background: orange;
+            }
+            
+            &:checked ~ .checkmark::after {
+                display: block;
+            }
+        }
+        
+        .checkmark {
+            display: inline-block;
+            background: #eee;
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            
+            &:hover {
+                background: #ccc;
+            }
+            
+            &::after {
+                content: "";
+                width: 5px;
+                height: 10px;
+                position: absolute;
+                display: none;
+                border: solid white;
+                border-width: 0px 3px 3px 0px;
+                top: 2px;
+                left: 6px;
+                transform: rotate(45deg);
+            }
+        }
+    }

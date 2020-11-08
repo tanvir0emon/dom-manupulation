@@ -1,0 +1,120 @@
+/*Hero Section*/
+
+.hero-image {
+    margin-top: 56px;
+    width: 100%;
+    height: 35rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        url(../images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+
+    h1 {
+        color: $text-secondary;
+        font-size: 60px;
+        letter-spacing: 8px;
+        backface-visibility: hidden;
+
+        @media (max-width:1200px) {
+            font-size: 55px;
+            letter-spacing: 7px;
+        }
+        
+        @media (max-width:992px){
+            font-size: 50px;
+            letter-spacing: 5px;
+        }
+        
+        @media (max-width:768px){
+            font-size: 45px;
+            letter-spacing: 3px;
+        }
+        
+        @media (max-width:575px){
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+    }
+
+    .move-left {
+        animation-name: move-left;
+        animation-duration: 1s;
+        backface-visibility: hidden;
+    }
+
+    .move-right {
+        animation-name: move-right;
+        animation-duration: 1s;
+        backface-visibility: hidden;
+    }
+
+    a {
+        display: inline-block;
+        color: $text-secondary;
+        border: 2px solid orange;
+        padding: 20px 50px;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 1rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        backface-visibility: hidden;
+        animation-name: move-up;
+        animation-duration: 0.5s;
+        
+        @media (max-width:1200px){
+            padding: 16px 40px;
+        }
+        
+        @media (max-width: 992px){
+            padding: .9rem 2.5rem;
+            font-size: 1rem;
+        }
+        
+        @media (max-width:768px){
+            padding: 0.8rem 2.2rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width:575px){
+            padding: 0.7rem 2rem;
+            font-size: 0.8rem;
+        }
+
+        &::before {
+            content: '';
+            width: 101%;
+            height: 101%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $background-primary;
+            z-index: -1;
+            transform: translateY(-100%);
+            transition: transform 0.5s ease-out;
+        }
+
+        &:hover:before {
+            transform: translateY(0);
+        }
+    }
+
+
+
+}
+
+/*End Hero Section*/

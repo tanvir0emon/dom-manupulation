@@ -1,0 +1,202 @@
+.single-course{
+    background: white;
+    padding: 1rem;
+    margin-top: 56px;
+    
+    img{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    p{
+        text-align: justify;
+    }
+    
+    .share {
+        a{
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            border-radius: 3px;
+        }
+        
+         .facebook{
+             background: #3b5998;
+        }
+        
+        .twitter{
+            background: #1da1f2;
+        }
+    }
+}
+
+/*Author Section */
+.author{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+    h3, h4{
+        margin-bottom: 1rem;
+    }
+    
+    .author-content{
+        display: flex;
+        font-style: italic;
+    }
+    
+    img{
+       @include img-round(100px, 100px)
+    }
+    
+    .author-description p>a{
+        color: #ea4335;    
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+
+    .author-social{
+        margin-top: 1rem;
+        
+        a:not(:last-child){
+            margin-right: 1rem;
+            
+            .fa-facebook{
+                color: #4b6ea9;
+            }
+            
+            .fa-twitter{
+                color: #1ab2f5;
+            }
+            
+            .fa-google-plus{
+                color: #d73533;
+            }
+            
+            .fa-instagram{
+                color: #405de6;;
+            }
+            
+            .fa-youtube{
+                color: #d44638;;
+            }
+
+        }
+    }
+
+}
+
+/*End Author Section*/
+
+
+/*Related Course Section*/
+.related-course{
+    @include section;
+    
+    >h3{
+        margin-bottom: 1rem;
+    }
+    
+    img{
+        display: inline-block;
+        width: 100%;
+    }
+    
+    a{
+        @include title;
+    }
+}
+/*End Related Course Section*/
+
+/*Recent Comment Section*/
+.recent-comment{
+    @include section;
+    
+    .content{
+        display: flex;
+        margin-bottom: 1rem;
+        
+        img{
+            @include img-round(100px, 100px)
+        }
+        
+        h4{
+            display: inline-block;
+            margin-right: 1rem;
+            font-weight: 500;
+        }
+        
+        small{
+             color: #999999;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+        }
+        
+         p{
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: whitesmoke;
+            background: linear-gradient(to right, #F0750F 0px, orange 100%) repeat scroll 0 0;
+            padding: 5px 15px;
+            font-size: .7rem;
+        }
+
+    }
+    
+    >h3{
+        margin-bottom: 1rem;
+    }
+}
+
+/*End Recent Comment Section*/
+
+
+
+/*Comment Section*/
+
+.comment {
+    @include section;
+    
+    input:not([type="checkbox"]) {
+       @include input;
+    }
+    
+    textarea {
+        @include textarea;
+    }
+    
+    button {
+        @include button-submit;
+    }
+    
+    ::placeholder {
+        font-size: 1rem;
+    }
+    
+}
+
+/*End Comment Section*/
+
+
+/*Media Query Section*/
+@media all and (max-width: 768px) {
+    p, .comment ::placeholder{
+        font-size: 0.9rem;
+    }
+    
+    .related-course h3 > a{
+        font-size: 1rem;
+    }
+}
+/*End Media Query Section*/

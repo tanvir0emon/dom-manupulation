@@ -1,0 +1,126 @@
+.about-us{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    
+    &-content{
+        flex-basis: 50%;
+        
+        @media(max-width:575px){
+                flex-basis: 100%;
+        }
+        section{
+            margin-bottom: 1rem;
+
+            h3{
+                margin-bottom: 1rem;
+            }
+
+            p{
+                font-style: italic;
+                text-align: justify;
+            }
+        }
+    }
+    
+    &-image{
+        flex-basis: 50%;    
+        padding-left: 1rem;
+        @media(max-width:575px){
+            flex-basis: 100%;
+            padding:0;
+        }
+        
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.team{
+    margin:{
+        top: 4rem;
+        bottom: 2rem;
+    }
+    &-title{
+        @include center;
+        flex-direction: column;
+        
+        p{
+            color: $text-grey;
+        }
+    }
+    
+    &-member{
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .card{
+            flex-basis: 23%;
+            background: $background-light;
+            
+            @media(max-width:992px){
+                flex-basis: 46%;
+                margin-bottom: 1rem;
+            }
+            
+            @media(max-width:575px){
+                flex-basis: 100%;
+            }
+            
+            &-container{
+                position: relative;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: auto;
+                    transition: transform 0.3s;
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+
+                .caption{
+                    max-width: 90%;
+                    background: rgba(33, 37, 41, 0.8);
+                    position: absolute;
+                    bottom: 13%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    padding: 15px 30px;
+
+                }
+            }
+            &-footer{
+                @include center;
+                flex-direction: column;
+                
+                h4{
+                    font-size: 20px;
+                    margin-top: 0.5rem;
+                }
+                .social{
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    a{
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        height: 40px;
+                        width: 40px;
+                        background: $background-primary;
+                        color: white;
+                        border-radius: 50%;
+                        @include center;
+                        margin: 0.5rem 1rem 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
